@@ -19,14 +19,14 @@
 | — | — | Sin escaladas |
 
 ## Capas aplicadas (N0)
-- [ ] **3.1 Git + remoto** — **NO HECHO.** El proyecto no es un repositorio Git. Prioridad máxima: `git init`, primer commit, remoto en GitHub.
+- [x] **3.1 Git + remoto** — hecho el 2026-08-15. Repo privado en `https://github.com/orbitalve-svg/serenity-vida-holistica`, rama `main`, primer commit `834ee16`. Regla: `git status` limpio antes de cada sesión grande de cambios; commit al cerrar cada bloque de trabajo.
 - [ ] 3.7 Monitoreo ligero — pendiente: monitor de uptime (UptimeRobot / Better Stack) al publicar.
 - [x] 3.12 Imágenes — todas en WebP y dimensionadas al uso (hero, retrato, 70 fotos de galería en dos tamaños, con `loading="lazy"` bajo el pliegue). CDN: lo da Vercel, verificar con `curl -I` tras el primer deploy.
 - [ ] 3.14 Cabeceras de seguridad — `vercel.json` creado el 2026-08-15 con CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy. **Verificar en securityheaders.com tras el deploy** (objetivo: B o mejor).
 - [x] 3.16 Auditoría de dependencias — `npm audit --production`: 0 vulnerabilidades (2026-08-15). Repetir antes de cada deploy.
 
 ## Auditoría pre-lanzamiento (Sección 7, N0)
-- [ ] Repo en remoto y actualizado
+- [x] Repo en remoto y actualizado
 - [ ] HTTPS activo, `http://` redirige (Vercel lo hace solo — confirmar)
 - [ ] Cabeceras de seguridad, nota B+ en securityheaders.com
 - [x] Imágenes en WebP y dimensionadas

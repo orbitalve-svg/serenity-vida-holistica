@@ -124,5 +124,7 @@ perfil de Google Business.
   estiraba al recogerse la barra y la página rebotaba); la barra fija no
   usa `backdrop-filter` en táctil; la luz del hero se mueve con **toque e
   inclinación** (giroscopio con permiso en iPhone), no con el arrastre.
-- 2026-08-15 — Entrevista de Clasificación: N0. Hosting Vercel. Falta poner
-  el proyecto en Git (capa 3.1) — prioridad.
+- 2026-08-15 — Entrevista de Clasificación: N0. Hosting Vercel. Repo privado:
+  `github.com/orbitalve-svg/serenity-vida-holistica` (rama `main`). Es
+  privado a propósito: las fotos de la galería son de personas reales en
+  sesiones íntimas.
