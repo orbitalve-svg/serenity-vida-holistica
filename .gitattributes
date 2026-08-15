@@ -1,0 +1,7 @@
+# Guardar siempre LF en el repo, aunque se edite desde Windows
+* text=auto eol=lf
+*.webp binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff2 binary

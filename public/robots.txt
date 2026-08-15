@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Activar cuando haya dominio definitivo:
+# Sitemap: https://DOMINIO/sitemap.xml

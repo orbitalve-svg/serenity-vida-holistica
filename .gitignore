@@ -1,0 +1,20 @@
+# Dependencias y build
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Secretos y entorno (capa 3.3 del PROTOCOLO)
+.env
+.env.*
+!.env.example
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Herramientas locales de Claude Code (config de máquina, no del proyecto)
+.claude/launch.json
+skills-lock.json
