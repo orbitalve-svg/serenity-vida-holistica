@@ -56,7 +56,14 @@ Estado al 2026-08-15: **N0 — Estático**, entrevista hecha. Ver PROJECT-LEVEL.
 - Estructura de URLs: una sola página con anclas — `#inicio`, `#servicios`,
   `#galeria`, `#formaciones`, `#chakras`, `#sobre-mi`, `#contacto`.
 - Desarrollo: `npx vite --host --port 5176`. Verificar siempre con
-  `npx tsc -b` y `npx vite build` antes de dar algo por hecho.
+  `npx tsc -b` y `npm run build` antes de dar algo por hecho.
+- **Prerender (SEO):** `npm run build` renderiza la app en Node
+  (`src/entry-server.tsx` + `scripts/prerender.mjs`) y vuelca el HTML en
+  `dist/index.html`. Reglas que impone: **nada de `window`, `document`,
+  `localStorage` ni `matchMedia` durante el render** (solo en `useEffect`
+  o handlers); **nada de `Math.random()` en el render** (usar semilla);
+  el estado inicial de un componente debe ser el mismo en Node y en el
+  navegador. Si el build falla en el paso «prerender», casi seguro es eso.
 
 ## Marca
 

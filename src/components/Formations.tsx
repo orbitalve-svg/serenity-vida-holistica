@@ -484,18 +484,23 @@ export default function Formations() {
 
   const formation = FORMATIONS.find((f) => f.id === activeId) ?? FORMATIONS[0]
 
-  const particles = useMemo(
-    () =>
-      Array.from({ length: 32 }, () => ({
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        size: 1 + Math.random() * 2.5,
-        delay: Math.random() * 6,
-        dur: 5 + Math.random() * 6,
-        op: 0.25 + Math.random() * 0.5,
-      })),
-    [],
-  )
+  // Azar con semilla, no `Math.random`: el prerender y el navegador tienen
+  // que generar las mismas partículas o React se queja al hidratar.
+  const particles = useMemo(() => {
+    let s = 20240815
+    const rnd = () => {
+      s = (s * 1664525 + 1013904223) % 4294967296
+      return s / 4294967296
+    }
+    return Array.from({ length: 32 }, () => ({
+      left: rnd() * 100,
+      top: rnd() * 100,
+      size: 1 + rnd() * 2.5,
+      delay: rnd() * 6,
+      dur: 5 + rnd() * 6,
+      op: 0.25 + rnd() * 0.5,
+    }))
+  }, [])
 
   return (
     <section

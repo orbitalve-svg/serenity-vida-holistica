@@ -35,11 +35,12 @@ export default function Hero() {
   const giroPedido = useRef(false)
   const quitarGiro = useRef<(() => void) | null>(null)
   const [tocado, setTocado] = useState(false)
-  const [tactil] = useState(
-    () =>
-      typeof window !== 'undefined' &&
-      window.matchMedia('(hover: none), (pointer: coarse)').matches,
-  )
+  // Se decide tras montar, no en el estado inicial: el prerender no tiene
+  // `window` y el primer render del navegador debe coincidir con ese HTML.
+  const [tactil, setTactil] = useState(false)
+  useEffect(() => {
+    setTactil(window.matchMedia('(hover: none), (pointer: coarse)').matches)
+  }, [])
 
   useEffect(() => {
     // Sólo ratón y lápiz mueven la luz al pasar. El dedo no: en el teléfono
@@ -199,6 +200,8 @@ export default function Hero() {
           >
             Tus raíces
           </span>
+          {/* Espacio real entre las dos líneas: son <span> en bloque y sin
+              él Google y los lectores de pantalla leen «raícesguardan». */}{' '}
           <span
             className="block font-normal text-5xl sm:text-7xl md:text-8xl -mt-1 hero-anim hero-reveal"
             style={{ letterSpacing: '-0.08em', animationDelay: '0.42s' }}

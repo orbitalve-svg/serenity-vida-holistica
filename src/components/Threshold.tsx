@@ -16,28 +16,37 @@ type Phase = 'open' | 'leaving' | 'done'
  * Se muestra una vez por sesión (o siempre con `?umbral` en la URL), se salta
  * con un clic o cualquier tecla, y se omite si se pidió movimiento reducido.
  */
+/** ¿Toca mostrar el umbral en esta visita? Sólo tiene sentido en el navegador. */
+function debeAbrirse(): boolean {
+  // La accesibilidad manda: si pidieron movimiento reducido, no hay umbral.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false
+
+  // `?umbral` en la URL lo fuerza — sirve para probarlo y para demos.
+  try {
+    if (new URLSearchParams(window.location.search).has('umbral')) return true
+  } catch {
+    /* URL rara: seguimos con la lógica normal */
+  }
+
+  // Si no, sólo una vez por sesión para no repetirlo en cada navegación.
+  try {
+    if (window.sessionStorage.getItem(SESSION_KEY)) return false
+  } catch {
+    /* almacenamiento bloqueado: mostramos el umbral igualmente */
+  }
+  return true
+}
+
 export default function Threshold() {
-  const [phase, setPhase] = useState<Phase>(() => {
-    if (typeof window === 'undefined') return 'done'
+  // Arranca cerrado y decide tras montar. Así el HTML que genera el
+  // prerender (sin `window`) y el primer render en el navegador coinciden, y
+  // React hidrata sin quejas; el umbral aparece un fotograma después, con
+  // su propio fundido, así que no se nota.
+  const [phase, setPhase] = useState<Phase>('done')
 
-    // La accesibilidad manda: si pidieron movimiento reducido, no hay umbral.
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return 'done'
-
-    // `?umbral` en la URL lo fuerza — sirve para probarlo y para demos.
-    try {
-      if (new URLSearchParams(window.location.search).has('umbral')) return 'open'
-    } catch {
-      /* URL rara: seguimos con la lógica normal */
-    }
-
-    // Si no, sólo una vez por sesión para no repetirlo en cada navegación.
-    try {
-      if (window.sessionStorage.getItem(SESSION_KEY)) return 'done'
-    } catch {
-      /* almacenamiento bloqueado: mostramos el umbral igualmente */
-    }
-    return 'open'
-  })
+  useEffect(() => {
+    if (debeAbrirse()) setPhase('open')
+  }, [])
 
   const timer = useRef<number | undefined>(undefined)
 

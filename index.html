@@ -9,11 +9,53 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#0F0A1C" />
 
-    <title>Serenity Vida Holística · Terapias, Reiki y Registros Akáshicos</title>
+    <!-- Title con la ciudad: para un negocio local, «Lechería» en el título
+         pesa más que cualquier otra palabra. Description ≤155 caracteres:
+         Google corta ahí y antes se perdía el final. -->
+    <title>Serenity Vida Holística · Terapias y Reiki en Lechería</title>
     <meta
       name="description"
-      content="Serenity Vida Holística — Centro de terapias holísticas y formación espiritual de Yulexy Rodríguez. Reiki, Constelaciones Familiares, carta astral y Formaciones de Reiki Usui y Registros Akáshicos en Lechería, Anzoátegui."
+      content="Terapias holísticas, Reiki, Constelaciones Familiares y Formaciones de Reiki Usui y Registros Akáshicos con Yulexy Rodríguez en Lechería, Anzoátegui."
     />
+
+    <!--
+      Datos estructurados del negocio local (schema.org). Es lo que conecta la
+      web con la ficha de Google Maps. Nombre, dirección y teléfono deben ser
+      IDÉNTICOS aquí, en el footer y en el perfil de Google Business.
+      Al tener dominio: añadir "url" e "image" con URL absoluta, y "openingHours".
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Serenity Vida Holística",
+        "description": "Centro de terapias holísticas y formación espiritual: Reiki, Constelaciones Familiares, Coaching Sistémico, Registros Akáshicos, armonización de chakras y masajes energéticos.",
+        "telephone": "+584248042545",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "C.C. Anna, Av. Principal de Lechería, Local Étnicas",
+          "addressLocality": "Lechería",
+          "addressRegion": "Anzoátegui",
+          "addressCountry": "VE"
+        },
+        "areaServed": ["Lechería", "Barcelona", "Puerto La Cruz", "Venezuela"],
+        "founder": {
+          "@type": "Person",
+          "name": "Yulexy Rodríguez",
+          "jobTitle": "Terapeuta Holística y Coach Sistémico"
+        },
+        "sameAs": ["https://instagram.com/terapiasanacionyluz"],
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reiki presencial y a distancia" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Constelaciones Familiares" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lectura de Registros Akáshicos" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza y Armonización de Chakras" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Masaje Energético con Reiki" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Formación de Reiki Usui" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Formación de Registros Akáshicos" } }
+        ]
+      }
+    </script>
 
     <!--
       Tarjeta al compartir. Importa especialmente en WhatsApp, que es por donde

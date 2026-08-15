@@ -33,6 +33,8 @@
 - [ ] PageSpeed móvil > 85 — medir sobre la URL de producción
 - [ ] Monitor de uptime
 - [x] Meta tags, favicon, OG image — hechos. **Pendiente:** `og:image` y `og:url` a URL absoluta cuando haya dominio (hoy son relativas y WhatsApp no las mostrará)
+- [x] SEO on-page (2026-08-15): **prerender** en el build (`scripts/prerender.mjs`, React en Node, sin navegador) — el `index.html` sale con ~1.590 palabras en vez de vacío; JSON-LD `LocalBusiness`; title con la ciudad; description ≤155; H1 con espacio entre líneas. Verificado: hidratación sin errores en consola.
+- [ ] `<link rel="canonical">` — pendiente de dominio
 - [ ] `robots.txt` y `sitemap.xml` — pendientes de dominio
 - [ ] Enlaces revisados (ninguno a `localhost` ni a `#`)
 
