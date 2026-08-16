@@ -1,7 +1,7 @@
 import { MapPin, Instagram, Phone } from 'lucide-react'
 import Reveal from './Reveal'
 import MetatronCube from './MetatronCube'
-import { wa, ADDRESS_SHORT, INSTAGRAM, INSTAGRAM_URL, PHONE_DISPLAY } from '../lib/site'
+import { wa, INSTAGRAM, INSTAGRAM_URL, MODALIDAD_DETALLE, PHONE_DISPLAY } from '../lib/site'
 
 function WhatsappIcon({ size = 26 }: { size?: number }) {
   return (
@@ -81,10 +81,10 @@ export default function Contact() {
               <MapPin className="text-serenity-gold shrink-0 mt-0.5" size={20} aria-hidden="true" />
               <span>
                 <span className="block text-xs uppercase tracking-widest text-serenity-mist/70">
-                  Ubicación
+                  Modalidad
                 </span>
                 <span className="block text-serenity-cream text-sm leading-snug">
-                  {ADDRESS_SHORT}
+                  {MODALIDAD_DETALLE}
                 </span>
               </span>
             </div>

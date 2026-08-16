@@ -1,5 +1,5 @@
 import Logo from './Logo'
-import { wa, scrollToId, ADDRESS_SHORT, INSTAGRAM, INSTAGRAM_URL, PHONE_DISPLAY } from '../lib/site'
+import { wa, scrollToId, COBERTURA, INSTAGRAM, INSTAGRAM_URL, PHONE_DISPLAY } from '../lib/site'
 
 const NAV = [
   { id: 'servicios', label: 'Servicios' },
@@ -70,7 +70,7 @@ export default function Footer() {
                   WhatsApp · {PHONE_DISPLAY}
                 </a>
               </li>
-              <li className="py-2">{ADDRESS_SHORT}</li>
+              <li className="py-2">{COBERTURA}</li>
               <li>
                 <a
                   href={INSTAGRAM_URL}

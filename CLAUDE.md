@@ -21,10 +21,16 @@ Estado al 2026-08-15: **N0 — Estático**, entrevista hecha. Ver PROJECT-LEVEL.
   Coaching Sistémico, Hipnosis Regresiva, Lectura de Registros Akáshicos,
   Limpieza de Chakras, Masajes energéticos) y **Formaciones** certificadas
   de Reiki Usui y de Registros Akáshicos.
-- A quién: personas que buscan bienestar y sanación en Lechería / Anzoátegui
-  (Venezuela) y alrededores; alumnas de las Formaciones de toda Venezuela.
+- A quién: personas que buscan bienestar y sanación en **Ecuador y Venezuela**,
+  y alumnas de las Formaciones de toda Latinoamérica hispanohablante.
   **~80 % del tráfico llega desde el teléfono**, casi siempre por WhatsApp
   o Instagram.
+- **Sin local fijo.** Las sesiones presenciales se hacen en un espacio que se
+  coordina al agendar; el resto, a distancia por videollamada. La web **no
+  publica dirección**: no se atiende en un sitio público y fijo, y anunciar
+  uno confunde al visitante y a Google. En schema.org eso es
+  `ProfessionalService` con `areaServed`, nunca `LocalBusiness` con
+  `PostalAddress`.
 - Qué lo diferencia: Yulexy Rodríguez, 9 años de experiencia, fundadora;
   enfoque integral (mente, cuerpo, alma); Formaciones con niveles y
   certificado.
@@ -86,30 +92,42 @@ Estado al 2026-08-15: **N0 — Estático**, entrevista hecha. Ver PROJECT-LEVEL.
 
 Página única; las keywords se reparten por sección, no por URL.
 
+Se compite por **modalidad, no por ciudad**: no hay local fijo y se atiende a
+distancia, así que «reiki Lechería» no es el objetivo — lo es «reiki a
+distancia».
+
 | Sección | Keyword objetivo | Intención |
 |---|---|---|
-| Home / Servicios | terapias holísticas Lechería · Reiki Lechería | comercial |
-| Formaciones | formación Reiki Usui Venezuela · formación Registros Akáshicos | transaccional |
+| Home / Servicios | reiki a distancia · terapias holísticas online | comercial |
+| Servicios | constelaciones familiares online · lectura registros akáshicos | comercial |
+| Formaciones | formación Reiki Usui online certificada · curso registros akáshicos online | transaccional |
 | Sobre mí | Yulexy Rodríguez terapeuta holística | navegacional |
 | Chakras / Carta astral | test de chakras · carta astral gratis | informacional (captación) |
 
+- Español neutro: el público está en varios países. Evitar modismos de uno solo.
+- Al hablar de horarios de sesiones online, indicar siempre la zona horaria:
+  Ecuador (UTC−5) y Venezuela (UTC−4) llevan una hora de diferencia.
+- Precios en **USD**: es la moneda oficial de Ecuador y la de referencia de
+  facto en Venezuela. Una sola lista sirve para ambos públicos.
 - Competidores directos a vigilar: pendiente.
 - OG/Twitter: `og:image` y `og:url` deben pasar a **URL absoluta** al tener
   dominio; hoy son relativas y WhatsApp no muestra la tarjeta.
 
-## Negocio local
+## Datos de contacto
 
-Estos datos deben ser idénticos en el footer, en `src/lib/site.ts` y en el
-perfil de Google Business.
+Estos datos deben ser idénticos en el pie, en `src/lib/site.ts` y en el
+JSON-LD de `index.html`.
 
 - Nombre exacto: Serenity Vida Holística
-- Dirección: C.C. Anna, Av. Principal de Lechería, Local Étnicas, Lechería,
-  Anzoátegui, Venezuela
-- Teléfono: +58 424-8042545 (WhatsApp)
+- Teléfono: **+593 96 405 3009** (WhatsApp de Yulexy) — constante
+  `WHATSAPP_NUMBER` en `src/lib/site.ts`; ahí se cambia una vez y se propaga
 - Instagram: @terapiasanacionyluz
-- Horario: pendiente de confirmar con Yulexy
-- Zona de servicio: Lechería, Barcelona y Puerto La Cruz (presencial);
-  Reiki a distancia y Formaciones online a toda Venezuela
+- **Dirección: ninguna, a propósito** (ver «El negocio»)
+- Zona de servicio: Ecuador y Venezuela presencial con cita coordinada;
+  online a toda Latinoamérica
+- Google Business: **no aplica** mientras no haya un espacio fijo donde se
+  atienda al público. Google exige atención presencial en la dirección
+  declarada; una ficha sin eso acaba suspendida.
 
 ## Notas y decisiones
 
@@ -131,6 +149,10 @@ perfil de Google Business.
   estiraba al recogerse la barra y la página rebotaba); la barra fija no
   usa `backdrop-filter` en táctil; la luz del hero se mueve con **toque e
   inclinación** (giroscopio con permiso en iPhone), no con el arrastre.
+- 2026-08-15 — **El negocio no tiene local fijo**: presencial con cita
+  coordinada + online. Se retira la dirección de toda la web (pie, contacto,
+  FAQ, JSON-LD) y el SEO pasa de local a modalidad. WhatsApp nuevo:
+  +593 96 405 3009 (Ecuador).
 - 2026-08-15 — Entrevista de Clasificación: N0. Hosting Vercel. Repo privado:
   `github.com/orbitalve-svg/serenity-vida-holistica` (rama `main`). Es
   privado a propósito: las fotos de la galería son de personas reales en

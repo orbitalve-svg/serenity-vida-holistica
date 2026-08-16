@@ -26,7 +26,7 @@ const ve = (id: string, name: string, lat: number, lon: number): Place => ({
 
 export const PLACES: Place[] = [
   // ── Venezuela — el público principal ──
-  // Anzoátegui (donde está el consultorio)
+  // Anzoátegui
   ve('lecheria', 'Lechería', 10.19, -64.69),
   ve('pto-la-cruz', 'Puerto La Cruz', 10.21, -64.63),
   ve('barcelona-ve', 'Barcelona', 10.13, -64.69),

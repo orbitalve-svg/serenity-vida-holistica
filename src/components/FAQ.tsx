@@ -18,15 +18,19 @@ const FAQS: QA[] = [
   },
   {
     q: '¿Las sesiones son presenciales o a distancia?',
-    a: 'Ambas. El Reiki, la sanación energética y los Registros Akáshicos pueden realizarse a distancia con la misma efectividad. Las terapias de contacto, como el masaje energético, son presenciales en el consultorio.',
+    a: 'Ambas. El Reiki, la sanación energética, las Constelaciones Familiares y los Registros Akáshicos pueden realizarse a distancia con la misma efectividad, por videollamada. Las terapias de contacto, como el masaje energético, son presenciales.',
   },
   {
     q: '¿Cuánto dura una sesión y cada cuánto debo asistir?',
     a: 'Una sesión individual dura entre 60 y 90 minutos. La frecuencia depende de tu proceso: lo conversamos en tu primera consulta para diseñar un acompañamiento a tu medida.',
   },
   {
-    q: '¿Dónde están ubicados?',
-    a: 'Estamos en el C.C. Anna, Av. Principal de Lechería, Anzoátegui (Local Étnicas). Puedes escribirme por WhatsApp para coordinar tu cita y recibir la ubicación exacta.',
+    q: '¿Dónde se realizan las sesiones presenciales?',
+    a: 'El espacio se coordina contigo al agendar: escríbeme por WhatsApp, conversamos qué necesitas y te confirmo lugar, día y hora. Si estás en otra ciudad o país, trabajamos a distancia por videollamada con la misma profundidad.',
+  },
+  {
+    q: '¿Puedo tomar las Formaciones desde otro país?',
+    a: 'Sí. Las Formaciones de Reiki Usui y de Registros Akáshicos se imparten online en grupos reducidos, con acompañamiento en vivo y certificado al completar cada nivel. He acompañado a alumnas de Ecuador, Venezuela y otros países de Latinoamérica.',
   },
 ]
 

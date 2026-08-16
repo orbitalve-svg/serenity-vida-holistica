@@ -52,5 +52,5 @@ src/
 
 ## Contacto / CTA
 
-Todos los CTA enlazan a WhatsApp **0424-8042545**
-(`https://wa.me/584248042545`) con un mensaje pre-llenado según el servicio.
+Todos los CTA enlazan a WhatsApp **+593 96 405 3009**
+(`https://wa.me/593964053009`) con un mensaje pre-llenado según el servicio.

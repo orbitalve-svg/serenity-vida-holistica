@@ -31,7 +31,7 @@ const SERVICES: Service[] = [
     title: 'Reiki Presencial y a Distancia',
     desc: 'Imposición de manos para transmitir energía universal y equilibrar los centros energéticos del cuerpo.',
     meta: '1 hora aprox. · Presencial o a distancia',
-    long: 'El Reiki consiste en la imposición de manos para transmitir energía universal y, de esta manera, equilibrar los centros energéticos del cuerpo conocidos como chakras. Es una terapia suave y no invasiva que puedes recibir en el consultorio o a distancia, con la misma efectividad.',
+    long: 'El Reiki consiste en la imposición de manos para transmitir energía universal y, de esta manera, equilibrar los centros energéticos del cuerpo conocidos como chakras. Es una terapia suave y no invasiva que puedes recibir en persona o a distancia, con la misma efectividad.',
     expect:
       'Te recuestas vestido/a mientras impongo las manos sobre tus principales centros energéticos. Es común sentir calor, hormigueo o una relajación muy profunda.',
     benefits: [

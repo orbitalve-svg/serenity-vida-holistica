@@ -9,36 +9,35 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#0F0A1C" />
 
-    <!-- Title con la ciudad: para un negocio local, «Lechería» en el título
-         pesa más que cualquier otra palabra. Description ≤155 caracteres:
-         Google corta ahí y antes se perdía el final. -->
-    <title>Serenity Vida Holística · Terapias y Reiki en Lechería</title>
+    <!-- Sin ciudad en el title: no hay local fijo y se atiende a distancia,
+         así que se compite por modalidad («a distancia», «online») y no por
+         geografía. Description ≤155 caracteres: Google corta ahí. -->
+    <title>Serenity Vida Holística · Reiki y Registros Akáshicos online</title>
     <meta
       name="description"
-      content="Terapias holísticas, Reiki, Constelaciones Familiares y Formaciones de Reiki Usui y Registros Akáshicos con Yulexy Rodríguez en Lechería, Anzoátegui."
+      content="Terapias holísticas con Yulexy Rodríguez: Reiki a distancia, Constelaciones Familiares y Formaciones certificadas de Reiki Usui y Registros Akáshicos."
     />
 
     <!--
-      Datos estructurados del negocio local (schema.org). Es lo que conecta la
-      web con la ficha de Google Maps. Nombre, dirección y teléfono deben ser
-      IDÉNTICOS aquí, en el footer y en el perfil de Google Business.
-      Al tener dominio: añadir "url" e "image" con URL absoluta, y "openingHours".
+      Datos estructurados (schema.org). `ProfessionalService` y NO
+      `LocalBusiness` con dirección: no hay local fijo, las sesiones
+      presenciales se coordinan al agendar y el resto es a distancia. Declarar
+      una dirección donde no se atiende es dato falso —y una ficha de Google
+      así acaba suspendida—, por eso va `areaServed` en su lugar.
+      Al tener dominio: añadir "url" e "image" con URL absoluta.
     -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "ProfessionalService",
         "name": "Serenity Vida Holística",
-        "description": "Centro de terapias holísticas y formación espiritual: Reiki, Constelaciones Familiares, Coaching Sistémico, Registros Akáshicos, armonización de chakras y masajes energéticos.",
-        "telephone": "+584248042545",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "C.C. Anna, Av. Principal de Lechería, Local Étnicas",
-          "addressLocality": "Lechería",
-          "addressRegion": "Anzoátegui",
-          "addressCountry": "VE"
-        },
-        "areaServed": ["Lechería", "Barcelona", "Puerto La Cruz", "Venezuela"],
+        "description": "Terapias holísticas y formación espiritual, presenciales con cita coordinada y a distancia: Reiki, Constelaciones Familiares, Coaching Sistémico, Registros Akáshicos, armonización de chakras y masajes energéticos.",
+        "telephone": "+593964053009",
+        "availableLanguage": "es",
+        "areaServed": [
+          { "@type": "Country", "name": "Ecuador" },
+          { "@type": "Country", "name": "Venezuela" }
+        ],
         "founder": {
           "@type": "Person",
           "name": "Yulexy Rodríguez",
@@ -64,12 +63,14 @@
       Al publicar, sustituir el dominio de og:url y og:image por el definitivo.
     -->
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_VE" />
+    <!-- `es` neutro y no `es_VE`: el público está en Ecuador, Venezuela y el
+         resto de Latinoamérica. -->
+    <meta property="og:locale" content="es" />
     <meta property="og:site_name" content="Serenity Vida Holística" />
     <meta property="og:title" content="Serenity Vida Holística · Tus raíces guardan tu historia" />
     <meta
       property="og:description"
-      content="Terapias holísticas, Reiki, Constelaciones Familiares y Registros Akáshicos con Yulexy Rodríguez. Lechería, Anzoátegui."
+      content="Terapias holísticas con Yulexy Rodríguez: Reiki, Constelaciones Familiares y Registros Akáshicos. Presencial y a distancia."
     />
     <meta property="og:image" content="/og-image.jpg" />
     <meta property="og:image:width" content="1200" />

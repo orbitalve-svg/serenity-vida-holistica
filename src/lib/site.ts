@@ -1,7 +1,16 @@
-export const WHATSAPP_NUMBER = '584248042545'
-export const PHONE_DISPLAY = '0424-8042545'
-export const ADDRESS = 'C.C. Anna, Av. Principal de Lechería, Anzoátegui, Venezuela'
-export const ADDRESS_SHORT = 'Av. Principal de Lechería · C.C. Anna · Local Étnicas'
+export const WHATSAPP_NUMBER = '593964053009'
+// Formato internacional a propósito: el público ya no es de una sola ciudad,
+// y «096…» sólo se marca bien desde dentro de Ecuador.
+export const PHONE_DISPLAY = '+593 96 405 3009'
+/**
+ * No hay local fijo: las sesiones presenciales se hacen en un espacio que se
+ * coordina al agendar, y el resto es a distancia. Por eso la web no publica
+ * una dirección — publicarla y no atender ahí confunde al visitante y a
+ * Google, y una ficha de negocio con dirección falsa acaba suspendida.
+ */
+export const MODALIDAD = 'Online y presencial'
+export const MODALIDAD_DETALLE = 'Presencial con cita coordinada · Online a distancia'
+export const COBERTURA = 'Ecuador y Venezuela · Online a toda Latinoamérica'
 export const INSTAGRAM = '@terapiasanacionyluz'
 export const INSTAGRAM_URL = 'https://instagram.com/terapiasanacionyluz'
 
