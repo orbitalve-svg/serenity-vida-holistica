@@ -1,5 +1,23 @@
+# Buscadores tradicionales
 User-agent: *
 Allow: /
 
-# Activar cuando haya dominio definitivo:
-# Sitemap: https://DOMINIO/sitemap.xml
+# Rastreadores de búsqueda con IA. Se permiten de forma explícita: bloquearlos
+# deja la web fuera de las respuestas de ChatGPT, Claude y Perplexity.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# El build añade esta línea con el dominio real cuando se define SITE_URL
+# (ver scripts/prerender.mjs).

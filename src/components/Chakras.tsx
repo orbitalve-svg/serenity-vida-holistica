@@ -308,6 +308,8 @@ export default function Chakras() {
               <img
                 src={chakraFigure}
                 alt="Figura en meditación con los siete chakras"
+                width={736}
+                height={1318}
                 className="w-full h-auto block pointer-events-none"
                 loading="lazy"
                 decoding="async"

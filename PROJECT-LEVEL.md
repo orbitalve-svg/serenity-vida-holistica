@@ -35,8 +35,31 @@
 - [x] Meta tags, favicon, OG image — hechos. **Pendiente:** `og:image` y `og:url` a URL absoluta cuando haya dominio (hoy son relativas y WhatsApp no las mostrará)
 - [x] SEO on-page (2026-08-15): **prerender** en el build (`scripts/prerender.mjs`, React en Node, sin navegador) — el `index.html` sale con ~1.590 palabras en vez de vacío; JSON-LD `LocalBusiness`; title con la ciudad; description ≤155; H1 con espacio entre líneas. Verificado: hidratación sin errores en consola.
 - [ ] `<link rel="canonical">` — pendiente de dominio
-- [ ] `robots.txt` y `sitemap.xml` — pendientes de dominio
+- [x] `robots.txt` con los rastreadores de IA permitidos explícitamente
+      (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot)
+- [x] Página 404 útil (`public/404.html`), con enlaces de vuelta y a WhatsApp
+- [x] `sitemap.xml` y `canonical` — **se generan solos en el build** cuando
+      `SITE_URL` está definida; también convierten og:image y twitter:image a
+      URL absoluta. Sin esa variable el build avisa por consola.
 - [ ] Enlaces revisados (ninguno a `localhost` ni a `#`)
+
+## Cumplimiento del CLAUDE.md global
+Auditado el 2026-08-18 (el global se instaló el 15 y esta sesión arrancó el 14,
+así que no se cargó: sus reglas se aplicaron a posteriori).
+- [x] Regla #1 — HTML completo desde el servidor (prerender, ~1.648 palabras)
+- [x] Un solo h1, distinto del title · jerarquía h2/h3 real
+- [x] title 60 caracteres · description 150
+- [x] canonical, OG y Twitter (absolutas con SITE_URL)
+- [x] robots.txt real, sitemap, 404, favicon
+- [x] Imágenes WebP, con `alt`, con `width`/`height`, y 20 de 22 diferidas
+      (las 2 sin diferir son las del Hero, que están sobre el pliegue)
+- [x] font-display: swap · HTML semántico · sin CTA fijo que tape el móvil
+- [x] JSON-LD en la home · sin llms.txt
+- [ ] «Responde la pregunta principal en el primer párrafo» — el h1 es un
+      eslogan y el primer párrafo es poético. Decisión de marca pendiente de
+      revisar con la clienta.
+- [ ] «Nombra la entidad en lugar de usar pronombres» — la web habla en
+      primera persona («escríbeme»). Igual: decisión de voz de marca.
 
 ## Deuda de seguridad aceptada
 | Fecha | Qué | Riesgo | Revisar en |

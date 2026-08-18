@@ -60,7 +60,9 @@
       Tarjeta al compartir. Importa especialmente en WhatsApp, que es por donde
       llega y se reenvía la mayoría del público: sin esto sólo se ve el enlace
       pelado, sin imagen ni título.
-      Al publicar, sustituir el dominio de og:url y og:image por el definitivo.
+      Las rutas relativas de abajo las convierte a absolutas el build cuando
+      SITE_URL está definida (ver scripts/prerender.mjs). WhatsApp y Google
+      exigen absolutas: con relativas no se ve la tarjeta.
     -->
     <meta property="og:type" content="website" />
     <!-- `es` neutro y no `es_VE`: el público está en Ecuador, Venezuela y el

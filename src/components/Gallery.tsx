@@ -389,6 +389,9 @@ export default function Gallery() {
                   alt=""
                   width={480}
                   height={600}
+                  // La galería vive muy por debajo del pliegue: sin esto, las
+                  // 18 tarjetas del anillo se descargaban en la carga inicial.
+                  loading="lazy"
                   decoding="async"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -487,11 +490,17 @@ export default function Gallery() {
           </button>
 
           <div className="max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={activa.full}
-              alt={activa.evento.nombre}
-              className="max-h-[70vh] w-auto mx-auto rounded-2xl border border-serenity-gold/30 object-contain"
-            />
+            {/* Caja de alto fijo con la foto ajustada dentro: cada foto tiene
+                una proporción distinta, así que no se pueden poner `width` y
+                `height` fijos. Reservando la caja, el hueco existe antes de
+                que cargue y no hay salto de layout. */}
+            <div className="h-[70vh] w-full flex items-center justify-center">
+              <img
+                src={activa.full}
+                alt={activa.evento.nombre}
+                className="max-h-full max-w-full w-auto h-auto rounded-2xl border border-serenity-gold/30 object-contain"
+              />
+            </div>
             <p className="text-center mt-4 font-playfair italic text-serenity-cream text-lg sm:text-xl">
               {activa.evento.nombre}
             </p>

@@ -5,6 +5,13 @@
 
 ## Documentos que rigen este proyecto
 
+- **`~/.claude/CLAUDE.md` (global)** — reglas técnicas transversales, y manda
+  sobre este archivo. La **Regla #1** («todo el texto debe existir en el HTML
+  que devuelve el servidor») es la que obliga al prerender de este proyecto.
+  Otras que aplican aquí: no instalar dependencias sin preguntar, canonical y
+  sitemap siempre, rastreadores de IA permitidos en `robots.txt`,
+  `width`/`height` en toda imagen y carga diferida bajo el pliegue.
+
 - **PROTOCOLO.md** — blindaje y clasificación por niveles. Léelo antes de
   escribir código la primera vez y ejecuta la Sección 1 (Entrevista de
   Clasificación). Vuelve a leerlo cuando se añada un formulario, una base de
